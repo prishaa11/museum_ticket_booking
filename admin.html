@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Admin Panel{% endblock %}
+{% block content %}
+<h2>Admin Panel</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Contact Number</th>
+        <th>Date of Visit</th>
+        <th>Booking Date</th>
+    </tr>
+    {% for booking in bookings %}
+    <tr>
+        <td>{{ booking.id }}</td>
+        <td>{{ booking.name }}</td>
+        <td>{{ booking.date_of_birth }}</td>
+        <td>{{ booking.contact_number }}</td>
+        <td>{{ booking.date_of_visit }}</td>
+        <td>{{ booking.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/logout">Logout</a>
+{% endblock %}

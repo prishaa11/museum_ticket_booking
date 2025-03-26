@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Landing Page{% endblock %}
+{% block content %}
+<h2>Book Your Free Museum Visit</h2>
+<form action="/book" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+    <label>Date of Birth:</label>
+    <input type="date" name="date_of_birth" required>
+    <label>Contact Number:</label>
+    <input type="text" name="contact_number" required>
+    <label>Date of Visit:</label>
+    <input type="date" name="date_of_visit" required>
+    <button type="submit">Book</button>
+</form>
+{% endblock %}
